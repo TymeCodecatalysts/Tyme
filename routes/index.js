@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var cron = require('node-cron');
+const cron = require('node-cron');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,17 +11,17 @@ router.get('/', function(req, res, next) {
 
 function delayMessage(number, message) {
 	const accountSid = 'AC65bdbdfbf0837bccd4962a2293745ceb';
-    const authToken = '47d2cd5dc2994c6824db3ea677586b5d';
-    const client = require('twilio')(accountSid, authToken);
-    cron.schedule('5 * * * * *', function() {
+	const authToken = '47d2cd5dc2994c6824db3ea677586b5d';
+	const client = require('twilio')(accountSid, authToken);
+	cron.schedule('5 * * * * *', function() {
 		client.messages
 		.create({
 			to: number,
 			from: '+12012926280',
 			body: message,
-     	})
-     	.then((message) => console.log(message.sid));
-    });
+		})
+		.then((message) => console.log(message.sid));
+	});
 }
 
 module.exports = router;
