@@ -6,7 +6,10 @@ const cron = require('node-cron');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Tyme' });
-	delayMessage('+13215279114',"IT WOOOOORRRRRKSS");
+});
+
+router.post('/', function(req, res) {
+	delayMessage(req.body.phone,req.body.message);
 });
 
 function delayMessage(number, message) {
