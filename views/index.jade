@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to #{title}
+	form(name="send-message", method="post")
+		div.input
+			span.label Message
+			input(type="text", name="message")
+		div.input
+			span.label Phone Number
+			input(type="tel", name="phone")
+		div.actions
+			input(type="submit", value="Send")
+
