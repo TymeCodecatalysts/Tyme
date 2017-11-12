@@ -16,3 +16,5 @@ router.post('/', (req,res, next) => {
 	// mustBeLoggedIn(req, res, next)
 
 })
+
+module.exports = router

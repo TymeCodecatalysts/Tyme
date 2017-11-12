@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-// router.use('/user', require('./user'));
-// router.use('/contacts', require('./contacts'));
+//router.use('/user', require('./user'));
+//router.use('/contacts', require('./contacts'));
 router.use('/messages', require('./messages'));
 
 module.exports = router;
