@@ -3,7 +3,7 @@
 		"username": "ctp_tyme",
 		"password": "ctp_tyme",
 		"database": "TYME_development",
-		"host": "127.0.0.1",
+		"host": "localhost",
 		"dialect": "postgresql"
 	}
 }
