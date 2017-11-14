@@ -10,6 +10,8 @@ module.exports = router;
 
 // const cron = require('node-cron');
 // /* GET home page. */
+const cron = require('node-cron');
+/* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Tyme' });
 });
