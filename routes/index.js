@@ -10,9 +10,9 @@ module.exports = router;
 
 // const cron = require('node-cron');
 // /* GET home page. */
-// router.get('/', function(req, res, next) {
-// 	res.render('index', { title: 'Tyme' });
-// });
+router.get('/', function(req, res, next) {
+	res.render('index', { title: 'Tyme' });
+});
 
 // router.post('/', function(req, res) {
 // 	delayMessage(req.body.phone,req.body.message);
@@ -33,4 +33,4 @@ module.exports = router;
 // 	});
 // }
 
-//module.exports = router;
+module.exports = router;
