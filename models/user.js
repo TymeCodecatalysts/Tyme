@@ -31,8 +31,8 @@ module.exports = (sequelize, DataTypes) => {
 	);
 
 	User.associate = function(models) {
-		// User.hasMany(models.Contacts);
-		// User.hasMany(models.Messages);
+		User.hasMany(models.Contacts);
+		User.hasMany(models.Messages);
 	}
 
 	User.prototype.authenticate = function(plaintext) {

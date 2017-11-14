@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
 	});
 
 	Messages.associate = function(models) {
-		// Messages.belongsToMany(models.Contacts, {through: 'contacts_and_messages'});
-		// Messages.belongsTo(models.User);
+		Messages.belongsToMany(models.Contacts, {through: 'contacts_and_messages'});
+		Messages.belongsTo(models.User);
 	};
 	return Messages;
 };
