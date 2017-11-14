@@ -9,8 +9,6 @@ var index = require('./routes/index');
 var users = require('./routes/user');
 const models = require('./models')
 
-const PORT = process.env.PORT || 3000;
-
 var app = express();
 
 const PORT = process.env.PORT || 3000;
