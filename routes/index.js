@@ -14,7 +14,12 @@ const cron = require('node-cron');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Tyme' });
+
 });
+
+// router.post('/', function(req, res) {
+// 	delayMessage(req.body.phone,req.body.message);
+// });
 
 // router.post('/', function(req, res) {
 // 	delayMessage(req.body.phone,req.body.message);
