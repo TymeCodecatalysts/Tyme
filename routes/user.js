@@ -77,23 +77,31 @@ passport.use('local-login', new LocalStrategy({
 ))
 
 
+router.post('/', (req, res) => {
+  models.User.create({
+    email: req.body.email,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name
+  })
+  .then((user) => {
+    res.json(user);
+  })
+  .catch(() => {
+    res.sendStatus(400);
+  })
+});
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
 	// Comment out this line:
   //res.send('respond with a resource');
 
   // And insert something like this instead:
-  res.json([{
-  	id: 1,
-  	username: "Bob The Builder"
-  }, {
-  	id: 2,
-  	username: "Dora the Explorer"
-  }, {
-  	id: 3,
-  	username: "Spongebob"
-  }]);
+  models.User.findAll() 
+    .then((allUsers) => {
+      res.json(allUsers);
+    })
 
 });
 

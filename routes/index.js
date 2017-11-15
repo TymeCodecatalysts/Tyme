@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-//router.use('/user', require('./user'));
+router.use('/user', require('./user'));
 //router.use('/contacts', require('./contacts'));
 router.use('/messages', require('./messages'));
 
@@ -14,7 +14,6 @@ const cron = require('node-cron');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Tyme' });
-
 });
 
 // router.post('/', function(req, res) {
