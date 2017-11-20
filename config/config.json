@@ -1,0 +1,9 @@
+{
+	"development": {
+		"username": "ctp_tyme",
+		"password": "ctp_tyme",
+		"database": "TYME_development",
+		"host": "localhost",
+		"dialect": "postgresql"
+	}
+}
